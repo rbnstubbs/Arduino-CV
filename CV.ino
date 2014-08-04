@@ -3,13 +3,13 @@
 //ATMEGA32u4 ONLY
 #define LED 13
 
-// change the pwm duty cycle as needed (0-255)
+// change the pwm duty cycle as needed (0 - 2^16)
 int pwm = 0;
 int timer = 10;
 
 void setup(){
  // TCCR1 speed
-  DDRB| = (1<<7) | (1<<6) | (1<<5);
+  DDRB |= (1<<7) | (1<<6) | (1<<5);
   TCCR1A = 0xAA;
   TCCR1B = 0x19; 
   
